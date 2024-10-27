@@ -1,0 +1,26 @@
+﻿<h2>Rosa Squadra</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Ruolo</th>
+            <th>Numero Maglia</th>
+            <th>Presenze</th>
+            <th>Goal</th>
+            <th>Assist</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var giocatore in Model)
+        {
+            <tr>
+                <td>@giocatore.Nome</td>
+                <td>@giocatore.Ruolo</td>
+                <td>@giocatore.NumeroMaglia</td>
+                <td>@giocatore.Presenze</td>
+                <td>@giocatore.Goal</td>
+                <td>@giocatore.Assist</td>
+            </tr>
+        }
+    </tbody>
+</table>

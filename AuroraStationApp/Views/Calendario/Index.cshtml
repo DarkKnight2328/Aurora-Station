@@ -1,0 +1,26 @@
+﻿<h2>Calendario Partite</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Data e Ora</th>
+            <th>Avversario</th>
+            <th>Luogo</th>
+            <th>Goal Fatti</th>
+            <th>Goal Subiti</th>
+            <th>Conclusa</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var partita in Model)
+        {
+            <tr>
+                <td>@partita.DataOra.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@partita.Avversario</td>
+                <td>@partita.Luogo</td>
+                <td>@partita.GoalFatti</td>
+                <td>@partita.GoalSubiti</td>
+                <td>@partita.PartitaConclusa ? "Sì" : "No"</td>
+            </tr>
+        }
+    </tbody>
+</table>
